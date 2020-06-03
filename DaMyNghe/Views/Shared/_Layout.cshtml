@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <style>
+        body {
+/*            background-image: url('/Images/blue_abstract_background_310971.jpg');*/
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+        @{
+            Html.RenderAction("CommonView", "Home");
+        }
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <small class="d-block mb-3 text-muted">© 2009-@DateTime.Now.Year</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Đá mỹ nghệ Trường Sơn</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Phụng Châu - Chương Mỹ - Hà Nội</a></li>
+                            <li><a class="text-muted" href="#">Tài khoản ngân hàng</a></li>
+                            <li><a class="text-muted" href="#">Chủ TK : Lê Quang Sỹ</a></li>
+                            <li><a class="text-muted" href="#">Số TK : 3308205009419</a></li>
+                            <li><a class="text-muted" href="#">Ngân hàng Nông nghiệp Phát triển Nông thôn Hoa Lư Ninh Bình</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Liên hệ</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Nguyễn Xuân Trường</a></li>
+                            <li><a class="text-muted" href="#">SĐT: 090.222.3579</a></li>
+                            <li><a class="text-muted" href="#">Gmail: damynghetruongson@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Bản đồ</h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3133.4324233508287!2d105.69465069898331!3d20.940458926913493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7188a6eca82f11b2!2zxJDDoSBt4bu5IG5naOG7hyBUcsaw4budbmcgU8ahbg!5e0!3m2!1sen!2s!4v1590808033092!5m2!1sen!2s" width="250" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    @*<script src="~/Scripts/all.js"></script>*@
+    @*<link href="~/Content/all.css" rel="stylesheet" type="text/css" />*@
+</body>
+</html>
